@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+
+<section class='book-info'>
+{{#each data}}
+<div class = 'info'>
+    {{this.title}}
+  <div class = 'book-cover'>
+    <img class='book-cover' src='{{this.cover}}' alt='book covers'/>
+  </div>
+  {{/each}}
+</section>
