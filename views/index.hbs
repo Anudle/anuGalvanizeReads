@@ -1,2 +1,17 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+
+{{#each book}}
+    <section class="book-author-info">
+        <h4> title: {{this.title}}</h4>
+        <div class="book-author">
+            <div class="book-img">
+                <img class="book-img" src="{{this.cover}}" alt="book img" />
+            </div>
+            <p> Author: {{this.first_name}} {{this.last_name}} {{book.id}}</p>
+            <div class="author-img">
+                <img class="author-img" src="{{this.portrait}}" alt="book img" />
+            </div>
+            <p> Genre: {{this.genre}}</p>
+            <p>Book description: {{this.description}} </p>
+        </div>
+    </section>
+{{/each}}
