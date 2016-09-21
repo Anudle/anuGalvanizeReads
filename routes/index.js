@@ -13,8 +13,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/books', function(req, res, next) {
   knex('book').then(function(data){
-    res.render('books', { title: 'Books',
-                          data: data});
+    res.render('books', { title: 'Books'});
    });
 })
 
