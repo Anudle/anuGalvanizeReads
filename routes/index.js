@@ -18,12 +18,6 @@ router.get('/books', function(req, res, next) {
    });
 })
 
-router.get('/book-data/:id', function(req, res, next) {
-  knex('book').where({id:req.params.id}).then(function(data){
-  res.render('books-data', {title: 'Books-data',
-                            data: data[0]});
-    });
-});
 
 
 module.exports = router;
