@@ -1,6 +1,6 @@
 
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('books', function(table){
+  return knex.schema.createTable('book', function(table){
     table.increments();
     table.string('title');
     table.string('genre');
@@ -10,5 +10,5 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
- return knex.schema.dropTableIfExists('books');
+ return knex.schema.dropTableIfExists('book');
 };
