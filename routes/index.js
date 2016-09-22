@@ -98,6 +98,13 @@ router.get('/:id/edit-author', function(req,res,next){
   })
 })
 
+router.post('/:id/edit-author',function(req,res,next){
+    knex('author').where({id:req.params.id}).update(req.body).then(function(data){
+      res.redirect('/authors');
+    });
+});
+
+
 
 //Delete Author
 router.get('/:id/question-delete-author', function(req, res, next){
