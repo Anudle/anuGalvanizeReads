@@ -8,7 +8,7 @@ var pg = require('pg');
 
 // Home Page
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Galvanize Reads'});
+      res.render('index', { title: 'Galvanize Reads'});
    });
 
 // Books List

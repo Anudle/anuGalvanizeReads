@@ -81,7 +81,22 @@
   display: flex;
   justify-content: center;
 }
+/*homepage*/
+#landingPage{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+#indexAuthor{
+  background-image: url( 'http://www.clker.com/cliparts/6/6/1/1/11971016621129282895kobo_Style_pen.svg.hi.png');
+  background-size: 100% 100%;
+  height: 70vh;
+}
+#indexBook{
+  background-image: url( 'http://kingofwallpapers.com/book/book-018.jpg');
+  background-size: 100% 100%;
+  height: 70vh;
 
+}
 /*Books*/
 .book-info{
   padding-left: 40px;
@@ -120,6 +135,7 @@ margin-right: 2em;
 }
 
 .bio{
-  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
   text-align: center;
 }
