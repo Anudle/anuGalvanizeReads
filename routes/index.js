@@ -73,6 +73,12 @@ router.get('/authors', function(req,res,next){
   });
 });
 
+router.get('/authors/:id', function(req,res,next){
+  knex('author').where({id: req.params.id}).then(function(data){
+      res.render('author', {data: data[0]});
+    });
+});
+
 //Add Author
 router.get('/add-author', function(req, res, next) {
     res.render('addauthor');
@@ -85,12 +91,27 @@ router.post('/add-author',function(req,res,next){
  });
 });
 
-router.post('/books-add',function(req,res,next){
-  knex('book').insert({title: req.body.title, genre: req.body.genre, description: req.body.description, cover: req.body.cover})
-      .then(function(data){
-      res.redirect('/books');
+// Edit Author
+router.get('/:id/edit-author', function(req,res,next){
+  knex('author').where({id:req.params.id}).then(function(data){
+    res.render('editauthor', {data: data[0]});
+  })
+})
+
+
+//Delete Author
+router.get('/:id/question-delete-author', function(req, res, next){
+  knex('author').select().where({id: req.params.id}).then(function(data){
+    res.render('deleteauthor', {data: data[0]});
   });
 });
+
+router.get('/:id/delete-author',function(req,res,next){
+    knex('author').where({id: req.params.id}).del().then(function(data){
+      res.redirect('/authors');
+    });
+  });
+
 
 
 module.exports = router;
