@@ -11,7 +11,7 @@ router.get('/books', function(req, res, next) {
 });
 
 router.get('/', function(req, res, next) {
-    res.render('books', { title: 'Galvanize Reads'});
+    res.render('index', { title: 'Galvanize Reads'});
    });
 
 router.get('/book/:id')
