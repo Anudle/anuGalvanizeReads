@@ -26,8 +26,8 @@
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="/authors">Authors</a></li>
-                    <li class="active"><a href="/books">Books</a></li>
+                    <li  class="active"><a href="/authors">Authors</a></li>
+                    <li><a href="/books">Books</a></li>
                     <li><a href='/books-add'>Add Book</a></li>
                 </ul>
                 </ul>
@@ -35,21 +35,27 @@
         </div>
     </nav>
 
-    <section class="book-info">
-        <h1 class = 'book-data'> {{data.title}}</h1>
-        <div class="book-author">
-            <div class="book-img">
-                <img class="book-img" src="{{data.cover}}" alt="book img" />
-            </div>
-            <p class = 'book-data'> Genre: {{data.genre}}</p>
-            <p class = 'book-data'>Book description: {{data.description}} </p>
-        </div>
-        <div class='editBox'>
-          <a id='editBook' href="/{{data.id}}/edit-book" class="btn btn-primary">Edit {{data.title}}</a>
-        <a id='deleteBook' href="/{{data.id}}/question-delete-book" class="btn btn-danger">Delete {{data.title}}</a>
-      </div>
 
-    </section>
+  <button type="button">
+   <a href='/add-author'>
+         add author
+   </a>
+   </button>
+
+  <section class="author-info">
+
+    {{#each authors}}
+    <section class="author-box">
+      <div class='author-info'>
+        <h3 class='author-name'>
+        {{this.first_name}} {{this.last_name}}</h3>
+      <div class="author-img">
+            <img class="book-img" src="{{this.author_pic}}" alt="author img"/>
+      </div>
+      <p class='bio'>{{this.bio}}</p>
+    </div>
+    {{/each}}
+  </section>
 
 
 

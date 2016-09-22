@@ -81,8 +81,23 @@
   display: flex;
   justify-content: center;
 }
+/*homepage*/
+#landingPage{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+#indexAuthor{
+  background-image: url( 'http://www.clker.com/cliparts/6/6/1/1/11971016621129282895kobo_Style_pen.svg.hi.png');
+  background-size: 100% 100%;
+  height: 70vh;
+}
+#indexBook{
+  background-image: url( 'http://kingofwallpapers.com/book/book-018.jpg');
+  background-size: 100% 100%;
+  height: 70vh;
 
-/*Book*/
+}
+/*Books*/
 .book-info{
   padding-left: 40px;
   padding-right: 40px;
@@ -107,5 +122,20 @@ margin-right: 2em;
   margin-left: 2em;
 }
 .deleteQuestion{
+  text-align: center;
+}
+
+/*Authors*/
+.author-info{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.author-name{
+  text-align: center;
+}
+
+.bio{
+  margin-top: 5px;
+  margin-bottom: 10px;
   text-align: center;
 }

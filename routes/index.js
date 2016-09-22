@@ -8,7 +8,7 @@ var pg = require('pg');
 
 // Home Page
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Galvanize Reads'});
+      res.render('index', { title: 'Galvanize Reads'});
    });
 
 // Books List
@@ -66,6 +66,12 @@ router.post('/:id/edit-book',function(req,res,next){
     });
 });
 
+//Author
+router.get('/authors', function(req,res,next){
+  knex('author').select().then(function(data){
+    res.render('authors', {authors: data});
+  });
+});
 
 
 module.exports = router;
