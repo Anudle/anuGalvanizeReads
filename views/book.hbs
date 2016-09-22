@@ -35,17 +35,18 @@
         </div>
     </nav>
 
-
-{{#each book}}
-    <section class="book-box">
-        <div class="book-info">
-            <h3 class='book-data'>{{this.title}}</h3>
-            <img class="book-img" src="{{this.cover}}" alt="book img" />
-            <p class = 'book-data'> Genre: {{this.genre}}</p>
-            <p class = 'book-data'>{{this.description}} </p>
-      </div>
+    <section class="book-info">
+        <h1 class = 'book-data'> {{data.title}}</h1>
+        <div class="book-author">
+            <div class="book-img">
+                <img class="book-img" src="{{data.cover}}" alt="book img" />
+            </div>
+            <p class = 'book-data'> Genre: {{data.genre}}</p>
+            <p class = 'book-data'>Book description: {{data.description}} </p>
+        </div>
     </section>
-{{/each}}
+
+
 
 </body>
 
