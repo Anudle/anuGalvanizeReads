@@ -73,5 +73,24 @@ router.get('/authors', function(req,res,next){
   });
 });
 
+//Add Author
+router.get('/add-author', function(req, res, next) {
+    res.render('addauthor');
+   });
+
+router.post('/add-author',function(req,res,next){
+ knex('author').insert({first_name: req.body.first_name, last_name: req.body.last_name, bio: req.body.bio, author_pic: req.body.author_pic})
+     .then(function(data){
+     res.redirect('/authors');
+ });
+});
+
+router.post('/books-add',function(req,res,next){
+  knex('book').insert({title: req.body.title, genre: req.body.genre, description: req.body.description, cover: req.body.cover})
+      .then(function(data){
+      res.redirect('/books');
+  });
+});
+
 
 module.exports = router;

@@ -27,9 +27,9 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="/authors">Authors</a></li>
-                      <li><a href='/add-author'>Add Author</a></li>
+                    <li class="active"><a href='/add-author'>Add Author </a></li>
                     <li><a href="/books">Books</a></li>
-                    <li class="active"><a href='/books-add'>Add Book</a></li>
+                    <li><a href='/books-add'>Add Book</a></li>
                 </ul>
                 </ul>
             </div>
@@ -38,32 +38,32 @@
 
     <!-- Form-->
 
-    <form class="form-horizontal" action="/books-add" method="post">
+    <form class="form-horizontal" action="/add-author" method="post">
         <fieldset>
-            <legend class='addbook'>Add Book</legend>
+            <legend class='addauthor'>Add Author</legend>
             <div class="form-group">
-                <label for="title" class="col-lg-2 control-label">Title</label>
+                <label for="first_name" class="col-lg-2 control-label">First Name</label>
                 <div class="col-lg-10">
-                    <input type="text" class="form-control" name="title" placeholder="The Hobbit">
+                    <input type="text" class="form-control" name="first_name" placeholder="Doctor">
                 </div>
             </div>
             <div class="form-group">
-                <label for="genre" class="col-lg-2 control-label">Genre</label>
+                <label for="last_name" class="col-lg-2 control-label">Last Name</label>
                 <div class="col-lg-10">
-                    <input type="text" class="form-control" name='genre' placeholder="Fantasy">
+                    <input type="text" class="form-control" name='last_name' placeholder="Seuss">
                 </div>
             </div>
             <div class="form-group">
-                <label for="cover" class="col-lg-2 control-label">Book Cover URL</label>
+                <label for="bio" class="col-lg-2 control-label">Biography</label>
                 <div class="col-lg-10">
-                    <input type="text" class="form-control" name='cover' placeholder="Hobbit_cover.JPG">
+                    <textarea class="form-control" name='bio' rows="3" id="textArea"></textarea>
+                    <span class="help-block">A short summary of the author</span>
                 </div>
             </div>
             <div class="form-group">
-                <label for="description" class="col-lg-2 control-label">Discription</label>
+                <label for="author_pic" class="col-lg-2 control-label">Authors Picture URL</label>
                 <div class="col-lg-10">
-                    <textarea class="form-control" name='description' rows="3" id="textArea"></textarea>
-                    <span class="help-block">A short summary of the book</span>
+                    <input type="text" class="form-control" name='author_pic' placeholder="Dr_Seuss.JPG">
                 </div>
             </div>
 
