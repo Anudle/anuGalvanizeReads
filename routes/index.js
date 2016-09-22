@@ -14,6 +14,12 @@ router.get('/', function(req, res, next) {
     res.render('books', { title: 'Galvanize Reads'});
    });
 
+router.get('/book/:id')
+   router.get('/book/:id', function(req,res,next){
+     knex('book').where({id: req.params.id}).then(function(data){
+         res.render('book', {data: data[0]});
+       });
+   });
 
 
 module.exports = router;

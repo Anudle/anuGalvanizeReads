@@ -1,0 +1,41 @@
+<section class="book-author-info">
+    <h4> title: {{data.title}}</h4>
+    <div class="book-author">
+        <div class="book-img">
+            <img class="book-img" src="{{data.cover}}" alt="book img" />
+        </div>
+
+        <p> Genre: {{data.genre}}</p>
+        <p>Book description: {{data.description}} </p>
+    </div>
+    <button type="button">
+<a href="/{{data.id}}/delete-book">delete {{data.title}}</a>
+</button>
+</section>
+
+<section class= 'form'>
+
+
+<form class="form" action="/{{data.id}}/book-info" method="post">
+
+<h3>Edit {{data.title}}</h3>
+<label for="Title"> Title
+<input type='text' name="title" value="{{data.title}}" >
+</label><br>
+<label for="genre"> Genre
+<input type='text' name="genre"value="{{data.genre}}" >
+</label><br>
+<label for="description"> Description :<br>
+<textarea name="description" placeholder="add book description">{{data.description}}</textarea>
+</label><br>
+<label for="cover">Book cover URL
+<input type='text' name="cover" value="{{data.cover}}" >
+</label><br>
+<button type="submit">edit book</button>
+
+</div>
+
+</form>
+
+
+</section>
