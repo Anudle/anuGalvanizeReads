@@ -82,7 +82,7 @@
   justify-content: center;
 }
 
-/*Book*/
+/*Books*/
 .book-info{
   padding-left: 40px;
   padding-right: 40px;
@@ -107,5 +107,19 @@ margin-right: 2em;
   margin-left: 2em;
 }
 .deleteQuestion{
+  text-align: center;
+}
+
+/*Authors*/
+.author-info{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.author-name{
+  text-align: center;
+}
+
+.bio{
+  margin-bottom: 5px;
   text-align: center;
 }
