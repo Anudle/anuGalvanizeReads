@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css" rel="stylesheet" integrity="sha384-awusxf8AUojygHf2+joICySzB780jVvQaVCAt1clU3QsyAitLGul28Qxb2r1e5g+" crossorigin="anonymous">
+  <link rel='stylesheet' href='../stylesheets/style.css' />
+  </script>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+</head>
+
+<body>
+  <!-- Nav Bar -->
+
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+              <a class="navbar-brand" href="/">Galvanize Reads</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li><a href="/author">Author</a></li>
+                  <li class="active"><a href="/books">Books</a></li>
+                  <li><a href='/books-add'>Add Book</a></li>
+              </ul>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+    <section class="book-info">
+        <h1 class = 'book-data'> {{data.title}}</h1>
+        <div class="book-author">
+            <div class="book-img">
+                <img class="book-img" src="{{data.cover}}" alt="book img" />
+            </div>
+
+            <p class = 'book-data'> Genre: {{data.genre}}</p>
+            <p class = 'book-data'>{{data.description}} </p>
+        </div>
+        <a id='deleteBook' href="/{{data.id}}/delete-book" class="btn btn-danger">Delete {{data.title}}</a>
+    </section>
+
+
+</body>
+
+</html>
