@@ -74,3 +74,23 @@
     background-color: #3d3d3d;
   }
 }
+
+/*Form*/
+
+.addbook{
+  display: flex;
+  justify-content: center;
+}
+
+/*Book*/
+.book-info{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.book-data{
+  text-align: center;
+}
+.book-img{
+  display: block;
+  margin: 0 auto;
+}
