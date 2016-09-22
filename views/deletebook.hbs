@@ -36,7 +36,10 @@
   </nav>
 
     <section class="book-info">
-        <h1 class = 'book-data'> {{data.title}}</h1>
+      <h1 class ='deleteQuestion'> Are your sure you want to delete: <br>
+         {{data.title}}</h1>
+      <a id='deleteBook' href="/{{data.id}}/delete-book" class="btn btn-danger">Delete {{data.title}}</a>
+        <h3 class = 'book-data'> {{data.title}}</h3>
         <div class="book-author">
             <div class="book-img">
                 <img class="book-img" src="{{data.cover}}" alt="book img" />
@@ -45,7 +48,6 @@
             <p class = 'book-data'> Genre: {{data.genre}}</p>
             <p class = 'book-data'>{{data.description}} </p>
         </div>
-        <a id='deleteBook' href="/{{data.id}}/delete-book" class="btn btn-danger">Delete {{data.title}}</a>
     </section>
 
 

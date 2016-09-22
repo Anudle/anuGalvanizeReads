@@ -95,6 +95,9 @@
   margin: 0 auto;
 }
 #deleteBook{
-  margin-left: 70%;
+  margin-left: 55%;
   margin-bottom: 5%;
+}
+.deleteQuestion{
+  text-align: center;
 }

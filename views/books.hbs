@@ -40,10 +40,12 @@
     <section class="book-box">
         <div class="book-info">
             <h3 class='book-data'>{{this.title}}</h3>
+            <a href= '/books/{{this.id}}'>
             <img class="book-img" src="{{this.cover}}" alt="book img" />
+            </a>
             <p class = 'book-data'> Genre: {{this.genre}}</p>
             <p class = 'book-data'>{{this.description}} </p>
-      </div>
+            </div>
     </section>
 {{/each}}
 
