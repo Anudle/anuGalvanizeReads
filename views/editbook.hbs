@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css" rel="stylesheet" integrity="sha384-awusxf8AUojygHf2+joICySzB780jVvQaVCAt1clU3QsyAitLGul28Qxb2r1e5g+" crossorigin="anonymous">
+  <link rel='stylesheet' href='../stylesheets/style.css' />
+  </script>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+</head>
+
+<body>
+  <!-- Nav Bar -->
+
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+              <a class="navbar-brand" href="/">Galvanize Reads</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li><a href="/author">Author</a></li>
+                  <li class="active"><a href="/books">Books</a></li>
+                  <li><a href='/books-add'>Add Book</a></li>
+              </ul>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+  <!-- Form-->
+
+  <form class="form-horizontal" action="/{{data.id}}/edit-book" method="post">
+      <fieldset>
+          <legend class='addbook'>Edit: {{data.title}}</legend>
+          <div class="form-group">
+              <label for="title" class="col-lg-2 control-label">Title</label>
+              <div class="col-lg-10">
+                  <input type="text" class="form-control" name="title" placeholder="{{data.title}}">
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="genre" class="col-lg-2 control-label">Genre</label>
+              <div class="col-lg-10">
+                  <input type="text" class="form-control" name='genre' placeholder="{{data.genre}}">
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="cover" class="col-lg-2 control-label">Book Cover URL</label>
+              <div class="col-lg-10">
+                  <input type="text" class="form-control" name='cover' placeholder='{{data.cover}}'>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="description" class="col-lg-2 control-label">Discription</label>
+              <div class="col-lg-10">
+                  <textarea class="form-control" name='description' rows="3" id="textArea"></textarea>
+                  <span class="help-block">A short summary of the book</span>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <div class="col-lg-10 col-lg-offset-2">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+          </div>
+      </fieldset>
+  </form>
+</body>
+
+</html>

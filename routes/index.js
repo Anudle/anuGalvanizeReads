@@ -18,6 +18,7 @@ router.get('/', function(req, res, next) {
      });
    });
 
+
    router.get('/books/:id', function(req,res,next){
      knex('book').where({id: req.params.id}).then(function(data){
          res.render('book', {data: data[0]});
@@ -51,7 +52,19 @@ router.get('/:id/delete-book',function(req,res,next){
     });
   });
 
+// Edit Book
 
+router.get('/:id/edit-book', function(req,res,next){
+  knex('book').where({id: req.params.id}).then(function(data){
+      res.render('editbook', {data: data[0]});
+    });
+});
+
+router.post('/:id/edit-book',function(req,res,next){
+    knex('book').where({id:req.params.id}).update(req.body).then(function(data){
+      res.redirect('/books');
+    });
+});
 
 
 

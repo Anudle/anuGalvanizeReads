@@ -94,9 +94,17 @@
   display: block;
   margin: 0 auto;
 }
+.editBox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5em;
+}
+#editBook{
+margin-right: 2em;
+}
 #deleteBook{
-  margin-left: 55%;
-  margin-bottom: 5%;
+  margin-left: 2em;
 }
 .deleteQuestion{
   text-align: center;
