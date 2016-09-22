@@ -94,3 +94,10 @@
   display: block;
   margin: 0 auto;
 }
+#deleteBook{
+  margin-left: 55%;
+  margin-bottom: 5%;
+}
+.deleteQuestion{
+  text-align: center;
+}

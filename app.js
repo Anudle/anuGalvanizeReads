@@ -29,6 +29,7 @@ app.use('/', routes);
 app.use('/books', routes);
 app.use('/books-add', routes);
 app.use('/books/:id', routes);
+app.use('/:id/question-delete-book', routes)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
