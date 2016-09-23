@@ -27,7 +27,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="/authors">Authors</a></li>
-                        <li><a href='/add-author'>Add Author</a></li>
+                    <li><a href='/add-author'>Add Author</a></li>
                     <li class="active"><a href="/books">Books</a></li>
                     <li><a href='/books-add'>Add Book</a></li>
                 </ul>
@@ -37,18 +37,18 @@
     </nav>
 
     <section class="book-info">
-        <h1 class = 'book-data'> {{data.title}}</h1>
+        <h1 class='book-data'> {{data.title}}</h1>
         <div class="book-author">
             <div class="book-img">
                 <img class="img" src="{{data.cover}}" alt="book img" />
             </div>
-            <p class = 'book-data'> Genre: {{data.genre}}</p>
-            <p class = 'book-data'>Book description: {{data.description}} </p>
+            <p class='book-data'> Genre: {{data.genre}}</p>
+            <p class='book-data'>Book description: {{data.description}} </p>
         </div>
         <div class='editBox'>
-          <a id='editBook' href="/{{data.id}}/edit-book" class="btn btn-primary">Edit {{data.title}}</a>
-        <a id='deleteBook' href="/{{data.id}}/question-delete-book" class="btn btn-danger">Delete {{data.title}}</a>
-      </div>
+            <a id='editBook' href="/{{data.id}}/edit-book" class="btn btn-primary">Edit {{data.title}}</a>
+            <a id='deleteBook' href="/{{data.id}}/question-delete-book" class="btn btn-danger">Delete {{data.title}}</a>
+        </div>
 
     </section>
 
