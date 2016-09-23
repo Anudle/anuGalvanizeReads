@@ -11,12 +11,12 @@ router.get('/', function(req, res, next) {
       res.render('index', { title: 'Galvanize Reads'});
    });
 
-// Books List
+//Books
    router.get('/books', function(req, res, next) {
-     knex.select('*').from('book').then(function(data){
+     knex('author').innerJoin('author_book', 'author_id', 'author.id').innerJoin('book','book_id', 'book.id').select('author_book.id as author_book_id','author.id as authors_id', 'book.id as books_id' ,'*').then(function(data){
          res.render('books', { book: data });
      });
-   });
+   })
 
 
    router.get('/books/:id', function(req,res,next){
@@ -103,7 +103,6 @@ router.post('/:id/edit-author',function(req,res,next){
       res.redirect('/authors');
     });
 });
-
 
 
 //Delete Author
